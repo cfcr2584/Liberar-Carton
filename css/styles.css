@@ -1,0 +1,298 @@
+:root {
+  --color_negro: #1b1f07;
+  --color_naranja: #eb5e28;
+  --color_gris: #333333;
+  --color_verde: #c7e22b;
+  --color_blanco: #ffffff;
+
+  /* // Colores
+$negro: #000000;
+$amarillo: #E08709;;
+$verde: #71B100;
+$blanco: #FFFFFF;
+$gris: #e1e1e1;
+$grisOscuro: #333333;
+$rojo: rgb(189,7, 7); */
+
+  --fuente: "Quicksand", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: var(--color_blanco);
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+p {
+  color: var(--color2);
+  font-size: 2rem;
+}
+
+.contenedor {
+  width: 85%;
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: #c7e22b;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8% auto auto 8%;
+
+  grid-template-areas:
+    "menu"
+    "parte1"
+    "parte2"
+    "footer";
+}
+
+.menu {
+  grid-area: menu;
+  background-color: #333;
+  color: #fff;
+
+  padding: 3rem 0 3rem 0;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+  }
+}
+
+.menu p {
+  font-size: 1.8rem;
+}
+
+.menu ul,
+a,
+p {
+  font-size: 1.8rem;
+}
+
+.nav__otros,
+.nav__title {
+  border: 2px solid transparent;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.nav__title:hover,
+.menu__activo {
+  color: var(--color_verde);
+  font-weight: bold;
+  border: 2px solid var(--color_verde);
+}
+
+.img__tapa {
+    width: 25%;
+    margin: 0 auto;
+  }
+
+.formulario {
+  fieldset {
+    border: none;
+  }
+
+  legend {
+    font-size: 2.8rem;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+  .formulario__int {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+
+    grid-template-areas:
+      "formulario__p2"
+      "formulario__p3"
+      "formulario__p4";
+  }
+
+  .formulario__p1 {
+    grid-area: formulario__p1;
+  }
+
+  .formulario__p2 {
+    grid-area: formulario__p2;
+  }
+  .formulario__p3 {
+    grid-area: formulario__p3;
+  }
+  .formulario__p4 {
+    grid-area: formulario__p4;
+  }
+  .formulario__p2,
+  .formulario__p3,
+  .formulario__p4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  label {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+  }
+
+  input:not([type="submit"]) {
+    padding: 1rem;
+    margin: 0 1rem;
+    background-color: var(--color_blanco);
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+  }
+}
+
+.parte1 {
+  grid-area: parte1;
+  border: 2px solid black;
+  border-radius: 50px 50px 50px 50px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.p__parrafoalert {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  color: red;
+  visibility: hidden;
+  font-weight: bold;
+}
+.contenedorboton {
+    width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton__naranja {
+  background-color: #333;
+  color: var(--color_blanco);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  text-align: center;
+  border: none;
+  border: 3px solid #333;
+  border-radius: 50% 20% / 10% 40%;
+  text-transform: uppercase;
+
+  width: 50%;
+
+  &:hover {
+    color: var(--color_naranja);
+    font-weight: bold;
+    border: 3px solid var(--color_naranja);
+    cursor: pointer;
+  }
+}
+
+.parte2 {
+  border: 1px solid black;
+
+  .parte2__contenedor {
+
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .creador {
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+  }
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.img__MiLogo {
+  width: 7%;
+  filter: grayscale(100%);
+}
+
+.alerta {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0rem 0;
+    width: 100%;
+  }
+  .error {
+    background-color: rgb(189, 7, 7);
+  }
